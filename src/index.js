@@ -9,13 +9,13 @@ app.use(morgan("combined"));
 // import file route
 const route = require("./routes");
 
-// Template
-app.engine(
-  "hbs",
-  handlebars.engine({
-    extname: ".hbs",
-  })
-);
+              // Template
+              app.engine(
+                "hbs",
+                handlebars.engine({
+                  extname: ".hbs",
+                })
+              );
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
